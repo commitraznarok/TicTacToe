@@ -156,12 +156,11 @@ public class Game {
 
         // Rows
         for (int i = 0; i < 3; i++) {
-           // if (grid[i][0] != '-') {
-                if (grid[i][0] != '-' && grid[i][0] == grid[i][1] && grid[i][1] == grid[i][2]) {
-                    result = Character.toUpperCase(grid[i][0]) + " wins";
-                    break;
-                }
-            //}
+            if (grid[i][0] != '-' && grid[i][0] == grid[i][1] && grid[i][1] == grid[i][2]) {
+                result = Character.toUpperCase(grid[i][0]) + " wins";
+                break;
+            }
+
         }
 
         // Columns
@@ -188,20 +187,6 @@ public class Game {
             }
         }
 
-        /*
-        if (result.equals("None")){
-            for (int j = 0; j < 3; j++) {
-                for (int i = 0; i < 3; i++) {
-                    if (gird[j][i]) == 'x'){
-                        counterMovesX++;
-                    }
-                }
-            }
-            if (counterMovesX > 4){
-                result = "Tie";
-            }
-        }*/
-
         if (result.equals("None")){
             for (int j = 0; j < 3; j++){
                 for ( int i = 0; i < 3; i++){
@@ -211,9 +196,6 @@ public class Game {
                 }
 
             }
-            //if (counterEmptyFields == 0)}{
-
-            //}
 
             if (counterEmptyFields < 1){
                 result = "Tie";
